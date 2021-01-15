@@ -1,7 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
@@ -11,11 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Entidades\Entidades.csproj" />
-    <ProjectReference Include="..\ImplementacionAtaque\ImplementacionAtaque.csproj" />
-    <ProjectReference Include="..\ImplementacionDefensa\ImplementacionDefensa.csproj" />
-    <ProjectReference Include="..\ImplementacionPasiva\ImplementacionPasiva.csproj" />
     <ProjectReference Include="..\Interfaces\Interfaces.csproj" />
-    <ProjectReference Include="..\Negocio\Negocio.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,8 +1,10 @@
 ﻿using System;
+using Entidades;
+using Interfaces;
 
-namespace VideoJuego
+namespace ImplementacionPasiva
 {
-    class Pasivo : IAccion
+    public class Pasivo : IAccion
     {
         public bool Correr(Personaje personaje)
         {

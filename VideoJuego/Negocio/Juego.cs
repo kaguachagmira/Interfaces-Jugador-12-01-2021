@@ -1,13 +1,16 @@
-﻿namespace VideoJuego
+﻿using Entidades;
+using Interfaces;
+
+namespace Negocio
 {
-    class Juego
+    public class Juego
     {
         IAccion accion;
         public Juego(IAccion accion)
         {
             this.accion = accion;
         }
-        internal void MoverJugador(Personaje personaje)
+        public  void MoverJugador(Personaje personaje)
         {
             accion.Correr(personaje);
             accion.Nadar(personaje);

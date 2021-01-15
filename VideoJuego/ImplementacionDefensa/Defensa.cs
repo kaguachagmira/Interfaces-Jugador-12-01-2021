@@ -1,8 +1,9 @@
 ﻿using System;
-
-namespace VideoJuego
+using Entidades;
+using Interfaces;
+namespace ImplementacionDefensa
 {
-    class Defensa : IAccion
+    public class Defensa : IAccion
     {
         public bool Correr(Personaje personaje)
         {

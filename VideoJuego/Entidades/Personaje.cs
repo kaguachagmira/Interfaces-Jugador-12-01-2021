@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace VideoJuego
+namespace Entidades
 {
-    class Personaje
+    public class Personaje
     {
         public string Nombre { get; set; }
         public Personaje(String nombre)
