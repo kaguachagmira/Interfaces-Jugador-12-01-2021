@@ -19,7 +19,6 @@ namespace VideoJuego
             IAccion accionPasiva = new Pasivo();
             IAccion accionAtaque = new Ataque();
             IAccion accionDefensa = new Defensa();*/
-            var kernel = new StandardKernel();
 
             do
             {
@@ -45,6 +44,7 @@ namespace VideoJuego
                 {
                     case 1:
                         Console.WriteLine("Seleccionaste el personaje Elder");
+                        var kernel = new StandardKernel();
                         Personaje elder = new Personaje("Elder");
                         kernel.Bind<IAccion>().To<Ataque>();
                         var juegoAtaqueElder = kernel.Get<Juego>();
@@ -52,48 +52,49 @@ namespace VideoJuego
                         Program.PresionarYSalir();
                         break;
                     case 2:
+                        var kernel1 = new StandardKernel();
                         Console.WriteLine("Seleccionaste el personaje Imperius");
                         Personaje imperius = new Personaje("Imperius");
-                        kernel.Bind<IAccion>().To<Defensa>();
-                        var juegoDefensaImperius = kernel.Get<Juego>();
+                        kernel1.Bind<IAccion>().To<Defensa>();
+                        var juegoDefensaImperius = kernel1.Get<Juego>();
                         juegoDefensaImperius.MoverJugador(imperius);
                         Program.PresionarYSalir();
                         break;
                     case 3:
+                        var kernel2 = new StandardKernel();
                         Console.WriteLine("Seleccionaste el personaje Sniper");
-                        Personaje sniper = new Personaje("Imperius");
-                        kernel.Bind<IAccion>().To<Pasivo>();
-                        var juegoPasivoSniper = kernel.Get<Juego>();
+                        Personaje sniper = new Personaje("Sniper");
+                        kernel2.Bind<IAccion>().To<Pasivo>();
+                        var juegoPasivoSniper = kernel2.Get<Juego>();
                         juegoPasivoSniper.MoverJugador(sniper);
                         Program.PresionarYSalir();
-
                         break;
                     case 4:
+                        var kernel3 = new StandardKernel();
                         Console.WriteLine("Seleccionaste el personaje Kael");
                         Personaje kael = new Personaje("Kael");
-                        kernel.Bind<IAccion>().To<Ataque>();
-                        var juegoAtaqueKael = kernel.Get<Juego>();
+                        kernel3.Bind<IAccion>().To<Ataque>();
+                        var juegoAtaqueKael = kernel3.Get<Juego>();
                         juegoAtaqueKael.MoverJugador(kael);
                         Program.PresionarYSalir();
-
                         break;
                     case 5:
+                        var kernel4 = new StandardKernel();
                         Console.WriteLine("Seleccionaste el personaje Orfea");
                         Personaje orfea = new Personaje("Orfea");
-                        kernel.Bind<IAccion>().To<Ataque>();
-                        var juegoAtaqueOrfea = kernel.Get<Juego>();
+                        kernel4.Bind<IAccion>().To<Ataque>();
+                        var juegoAtaqueOrfea = kernel4.Get<Juego>();
                         juegoAtaqueOrfea.MoverJugador(orfea);
                         Program.PresionarYSalir();
-
                         break;
                     case 6:
+                        var kernel5 = new StandardKernel();
                         Console.WriteLine("Seleccionaste el personaje Muradin");
                         Personaje muradin = new Personaje("Imperius");
-                        kernel.Bind<IAccion>().To<Ataque>();
-                        var juegoDefensaMuradin = kernel.Get<Juego>();
+                        kernel5.Bind<IAccion>().To<Ataque>();
+                        var juegoDefensaMuradin = kernel5.Get<Juego>();
                         juegoDefensaMuradin.MoverJugador(muradin);
                         Program.PresionarYSalir();
-
                         break;
                     case 7:
                         Console.WriteLine("Muchas gracias por usar este programita");
